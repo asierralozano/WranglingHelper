@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1109</width>
+    <height>631</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Wrangling helper</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resource.qrc">
+    <normaloff>:/icons/app.svg</normaloff>:/icons/app.svg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*QMainWindow{
+background-image:url(&quot;C:/Users/asierra/Downloads/2950446-abstract-colorful-white-background-shapes-digital-art-simple-background___abstract-wallpapers.jpg&quot;);
+background-position: center;
+}*/
+
+#centralwidget{
+/*
+background-image:url(&quot;C:/Users/asierra/Downloads/2950446-abstract-colorful-white-background-shapes-digital-art-simple-background___abstract-wallpapers.jpg&quot;)
+;background-position: center
+*/
+border-image: url(:/icons/background.jpg) 0 0 0 0 stretch stretch;
+;}
+
+QSpinBox{
+	min-height: 22px;
+	border:1px solid lightgrey; 
+	border-radius: 4px
+}
+
+QSpinBox::up-button {
+    background:transparent;
+}
+
+QSpinBox::up-arrow {
+    image: url(:/icons/light/chevron-up.svg);
+    width: 7px;
+    height: 7px;
+}
+
+QSpinBox::down-button {
+    background:transparent;
+}
+
+QSpinBox::down-arrow {
+    image: url(:/icons/light/chevron-down.svg);
+    width: 7px;
+    height: 7px;
+}
+
+QComboBox{
+	border:1px solid lightgrey;
+	border-radius: 4px;
+	min-height: 22px
+}
+
+QComboBox::drop-down {
+	subcontrol-origin: padding;
+	subcontrol-position: top right;
+	width: 15px;
+	border-left-width: 1px;
+	border-left-color: darkgray;
+	border-left-style: solid; /* just a single line */
+	border-top-right-radius: 3px; /* same radius as the QComboBox */
+	border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+	image: url(:/icons/light/chevron-down.svg);
+}
+
+QComboBox::down-arrow:on { /* shift the arrow when popup is open */
+    top: 1px;
+    left: 1px;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid lightgrey;
+	background:white;
+}
+
+QLineEdit {
+	border:1px solid lightgrey;
+	border-radius: 4px;
+	min-height: 22px
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Open Sans</family>
+          <pointsize>15</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Wrangling Rules</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="rules_searcher_le">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>180</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::ClickFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:1px solid lightgrey;
+border-radius: 4px</string>
+        </property>
+        <property name="placeholderText">
+         <string>Search...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,0">
+      <property name="spacing">
+       <number>50</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QTabWidget" name="rules_tabs_widget">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTabWidget{
+	background-color:white;
+}
+
+QTabWidget::tab-bar {
+	background-color:transparent;
+ }
+
+QTabBar {
+	font-size: 9pt;
+	font-family: Open Sans;
+}
+
+ QTabBar::tab {
+     background: transparent;
+     border: 0px solid #C4C4C3;
+     border-bottom: 3px solid #b3cde0;
+     min-width: 35px;
+     padding: 7px;
+    margin-right:10px;
+ }
+
+ QTabBar::tab:selected, QTabBar::tab:hover {
+     border-bottom: 3px solid #6497b1;
+ }
+
+ QTabBar::tab:selected {
+     border-bottom: 3px solid #005b96;
+ }</string>
+        </property>
+        <property name="currentIndex">
+         <number>-1</number>
+        </property>
+        <property name="documentMode">
+         <bool>false</bool>
+        </property>
+        <property name="movable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListWidget" name="loaded_rules_lw">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>180</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QListWidget{
+border:1px solid lightgrey;
+}
+
+QListWidget::item{
+padding:2px
+}</string>
+        </property>
+        <property name="dragDropMode">
+         <enum>QAbstractItemView::InternalMove</enum>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::ExtendedSelection</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1109</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuPreferences">
+    <property name="title">
+     <string>Preferences</string>
+    </property>
+    <addaction name="actionWrangler_only_jobs_from_now_on"/>
+   </widget>
+   <widget class="QMenu" name="menuWindows">
+    <property name="title">
+     <string>Windows</string>
+    </property>
+    <addaction name="actionConsole"/>
+    <addaction name="actionPriority_excel_import"/>
+   </widget>
+   <addaction name="menuPreferences"/>
+   <addaction name="menuWindows"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>Main toolbar</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QToolBar{
+	background-color:white;
+	border:1px solid lightgrey;
+	border-top: 0px solid black;
+}</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="actionRemove"/>
+   <addaction name="actionImport"/>
+   <addaction name="actionExport"/>
+   <addaction name="separator"/>
+   <addaction name="actionStart"/>
+  </widget>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/icons/light/add.svg</normaloff>:/icons/light/add.svg</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="statusTip">
+    <string>New</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionRemove">
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/icons/light/remove.svg</normaloff>:/icons/light/remove.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Remove</string>
+   </property>
+   <property name="statusTip">
+    <string>Remove</string>
+   </property>
+  </action>
+  <action name="actionImport">
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/icons/light/go-to-file.svg</normaloff>:/icons/light/go-to-file.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Import</string>
+   </property>
+   <property name="statusTip">
+    <string>Import</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/icons/light/save.svg</normaloff>:/icons/light/save.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Export</string>
+   </property>
+   <property name="statusTip">
+    <string>Export</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/icons/light/play.svg</normaloff>:/icons/light/play.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Start</string>
+   </property>
+   <property name="statusTip">
+    <string>Start/Pause</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionWrangler_only_jobs_from_now_on">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Wrangler only jobs from now on</string>
+   </property>
+  </action>
+  <action name="actionConsole">
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/icons/light/console.svg</normaloff>:/icons/light/console.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Console</string>
+   </property>
+  </action>
+  <action name="actionPriority_excel_import">
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/icons/light/new-file.svg</normaloff>:/icons/light/new-file.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Priority Excel Import</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

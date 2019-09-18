@@ -1,0 +1,26 @@
+<RCC>
+    <qresource>
+        <file>icons/light/add.svg</file>
+        <file>icons/light/remove.svg</file>
+        <file>icons/light/save.svg</file>
+        <file>icons/light/open-preview.svg</file>
+        <file>icons/light/play.svg</file>
+        <file>icons/light/pause.svg</file>
+        <file>icons/light/go-to-file.svg</file>
+        <file>icons/light/error.svg</file>
+        <file>icons/light/console.svg</file>
+        <file>icons/light/references.svg</file>
+        <file>icons/light/regex.svg</file>
+        <file>icons/light/info.svg</file>
+        <file>icons/light/new-file.svg</file>
+        <file>icons/light/chevron-up.svg</file>
+        <file>icons/light/chevron-down.svg</file>
+        <file>icons/light/color.svg</file>
+        <file>icons/enmissuenos.png</file>
+        <file>icons/on.png</file>
+        <file>icons/off.png</file>
+        <file>icons/references_pushed.png</file>
+        <file>icons/background.jpg</file>
+        <file>icons/app.svg</file>
+    </qresource>
+</RCC>

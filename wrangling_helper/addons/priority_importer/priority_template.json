@@ -1,0 +1,33 @@
+{
+    "1":{
+        "Priority": {
+            "relative": true, 
+            "enabled": true, 
+            "value": 5
+        },
+        "Machine Limit": {
+            "relative": true, 
+            "enabled": true, 
+            "value": 1
+        }      
+    },
+    "2":{
+        "Priority": {
+            "relative": true, 
+            "enabled": true, 
+            "value": 0
+        },
+        "Machine Limit": {
+            "relative": true, 
+            "enabled": true, 
+            "value": 0
+        }      
+    },
+    "3":{
+        "Priority": {
+            "relative": true, 
+            "enabled": true, 
+            "value": -5
+        }  
+    }
+}

@@ -1,0 +1,78 @@
+{
+    "rules": [
+        [
+            "User", 
+            "is", 
+            "asierra", 
+            false
+        ], 
+        [
+            "MachLmt", 
+            "is", 
+            "5", 
+            false
+        ], 
+        [
+            "Dept", 
+            "contains", 
+            "comp", 
+            false
+        ]
+    ], 
+    "options": {
+        "Chunk Frames": {
+            "relative": false, 
+            "enabled": false, 
+            "value": 1
+        }, 
+        "Group": {
+            "relative": false, 
+            "enabled": false, 
+            "value": "none"
+        }, 
+        "Priority": {
+            "relative": false, 
+            "enabled": true, 
+            "value": 60
+        }, 
+        "Concurrent Tasks": {
+            "relative": true, 
+            "enabled": true, 
+            "value": -5
+        }, 
+        "Machine Limit": {
+            "relative": false, 
+            "enabled": true, 
+            "value": 6
+        }, 
+        "Timeout": {
+            "relative": false, 
+            "enabled": true, 
+            "value": 16200
+        }, 
+        "Tasks": {
+            "relative": false, 
+            "enabled": false, 
+            "value": 1
+        }, 
+        "Pool": {
+            "relative": false, 
+            "enabled": false, 
+            "value": "none"
+        }
+    }, 
+    "tags": [
+        [
+            "Priority1", 
+            "#ffff7f"
+        ], 
+        [
+            "Comp", 
+            "#ff5500"
+        ], 
+        [
+            "Review", 
+            "#00aaff"
+        ]
+    ]
+}

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>433</width>
+    <height>44</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QLineEdit" name="key_le">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:1px solid lightgrey;
+border-radius: 4px</string>
+     </property>
+     <property name="placeholderText">
+      <string>Key. Ex: User</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="operators_cb">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QComboBox{
+	border:1px solid lightgrey;
+	border-radius: 4px
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    image: url(:/icons/light/chevron-down.svg);
+}</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>is</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>is not</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>contains</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>not contains</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="value_le">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>22</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:1px solid lightgrey;
+border-radius: 4px</string>
+     </property>
+     <property name="placeholderText">
+      <string>Value. Ex: asierra</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="regex_cb">
+     <property name="minimumSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Regex</string>
+     </property>
+     <property name="statusTip">
+      <string>Use regex</string>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/icons/light/regex.svg</normaloff>:/icons/light/regex.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="delete_bt">
+     <property name="minimumSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="text">
+      <string>D</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../resource.qrc">
+       <normaloff>:/icons/light/error.svg</normaloff>:/icons/light/error.svg</iconset>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
