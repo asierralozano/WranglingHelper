@@ -1,7 +1,7 @@
 # Wrangling Helper
 
 ## Introduction
-![alt text][WranglingHelper.png?raw=true "Wrangling Helper"]
+![alt text](WranglingHelper.png?raw=true "Wrangling Helper")
 
 The main idea of this tool, it helping all the RenderFarm Wranglers out there.  
 You are able to set automatic wrangling rules, that will autowrang the farm for you.  
@@ -26,6 +26,7 @@ All jobs that match the rules that you have specified, will be automatically set
 ## Requeriments
 * Only works with Python 2.7, due to Deadline API limitations
 * I'm using Qt.py to handle PySide, so you need to install it
+* I'm also using some of the AMAZING [VSCode Icons](https://github.com/microsoft/vscode-icons). Thanks Microsoft! 
 
 ## HowTo
 It's really easy to start with this tool:
