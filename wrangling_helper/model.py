@@ -6,6 +6,7 @@ from core.utils import send_wrangling_email, export_rule, decode_json
 from core.background_process import BackgroundProcess
 from view.rule_widget import RulesWidget
 from view.console import Console
+from view.tabbar import CustomTabBar
 from resources import resource
 from core.qlogging import getQLogger
 from addons.priority_importer.core import generate_priority_rules
@@ -28,6 +29,8 @@ class WranglingHelper(QtWidgets.QMainWindow):
         self._list_model = self.loaded_rules_lw.model()
         # self._rules_widgets = list()
         self.console = Console()
+        self.tabbar = CustomTabBar()
+        self.rules_tabs_widget.setTabBar(self.tabbar)
         self._connect_signals()
 
     @property
@@ -53,6 +56,7 @@ class WranglingHelper(QtWidgets.QMainWindow):
         self._list_model.rowsMoved.connect(self._item_in_list_moved)
         self.loaded_rules_lw.itemDoubleClicked.connect(self._handle_item_double_clicked)
         self.rules_searcher_le.textChanged.connect(self._search_in_list)
+        self.tabbar.change_name.connect(self._change_name_requested)
         logger.handlers[0].signalHander.logEvent.connect(self.registerLogger)
 
     def registerLogger(self, log):
@@ -62,6 +66,11 @@ class WranglingHelper(QtWidgets.QMainWindow):
             log (str): Log entry
         """
         self.console.console_widget.insertHtml(log)  
+
+    def _change_name_requested(self, tab_index):
+        tab_name = self.rules_tabs_widget.tabText(tab_index)
+        item = self.loaded_rules_lw.item(tab_index)
+        item.setText(tab_name)
 
     def _tab_moved(self, from_index, to_index):
         """Slot that handle the tabMoved signal. It will reorder also the ListWidget with
@@ -272,16 +281,7 @@ class WranglingHelper(QtWidgets.QMainWindow):
             self.actionStart.setIcon(QtGui.QIcon(":/icons/light/play.svg"))
             self._started = False        
             logger.info("Pausing")
-        self.rules_tabs_widget.setDisabled(self._started)   
-
-
-def initialize():
-    app = QtWidgets.QApplication(sys.argv)
-    wh = WranglingHelper()
-    # wh = BaseOption()
-    # wh.start()
-    wh.show()
-    app.exec_()    
+        self.rules_tabs_widget.setDisabled(self._started)            
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
